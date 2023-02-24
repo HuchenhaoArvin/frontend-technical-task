@@ -1,9 +1,7 @@
 import Head from 'next/head'
 import useSWR from 'swr'
-import Item from '../components/item'
 import Intro from '../components/intro'
 import Products from '../components/products'
-import { Product } from '../interfaces'
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
@@ -26,25 +24,9 @@ export default function Home() {
 
 
 
-      <main className="p-5 py-10 md:p-12 lg:p-16 bg-oat h-screen">
+      <main className="p-5 py-10 md:p-12 lg:p-16 bg-oat">
         <Intro></Intro>
         <Products products={data}></Products>
-        {/* <div className="prose">
-          <h1 className="text-4xl font-medium">👋 Hey there</h1>
-          <p>For this task we&apos;d like you to build a simple responsive collection UI. Please use the data provided at the top of <code>index.tsx</code> to display your products. Designs can be found <a href="https://www.figma.com/file/9p1gTUp3gtQV322qIfYcZB/Technical-Task?node-id=806%3A3431&t=Xrcs9XxeBXx9LfvF-1" target="_blank" rel="noreferrer">here</a>.</p>
-          <p>This task isn&apos;t designed to take a huge amount of time (1 - 2 hours max). We&apos;re more interested in how you approach the task. It would be great if you could use <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer">TailwindCSS</a> and <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">TypeScript</a>. To get started, fork this repository.</p>
-          <p>Once completed, please send us a link to your repository.</p>
-          <p>Any questions, please email <a href="mailto:jordan@dishpatch.co.uk">jordan@dishpatch.co.uk</a></p>
-          <p>Good luck! 🚀</p>
-        </div> */}
-
-        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {data.map((item: Product, index: number) => (
-            <Item product={item} key={index}></Item>
-          ))}
-        </div> */}
-
-
       </main>
 
 
