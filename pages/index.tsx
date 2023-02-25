@@ -22,8 +22,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-
-
       <main className="p-5 py-10 md:p-12 lg:p-16 bg-oat">
         <Intro></Intro>
         <Products products={data}></Products>
